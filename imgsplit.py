@@ -161,6 +161,7 @@ class AnnotatedImages:
                         adjusted_polygons = coord_adjust(polygons, refined_positions, accumulator_x, accumulator_y)
                         
                         if len(adjusted_polygons) == 0: # there's no polygon in the box
+                            accumulator_y += box_h - overlap
                             continue
                         
                         # get the image
